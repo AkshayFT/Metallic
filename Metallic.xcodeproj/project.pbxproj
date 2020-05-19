@@ -1,0 +1,856 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA1150DD233B4CAF0052C753 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1150DC233B4CAF0052C753 /* MetalBuffer.swift */; };
+		BA1150DE233B4CB30052C753 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1150DC233B4CAF0052C753 /* MetalBuffer.swift */; };
+		BA1805982469BF01003FC86A /* ViewController_Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1805972469BF01003FC86A /* ViewController_Metal.swift */; };
+		BA25EE942334E56500EAEEEF /* Brush.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA25EE932334E56500EAEEEF /* Brush.xcassets */; };
+		BA25EE982335060600EAEEEF /* FTBlitEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25EE972335060600EAEEEF /* FTBlitEncoder.swift */; };
+		BA25EE992335060600EAEEEF /* FTBlitEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25EE972335060600EAEEEF /* FTBlitEncoder.swift */; };
+		BA29283B2327AD30008F6C68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29283A2327AD30008F6C68 /* AppDelegate.swift */; };
+		BA29283D2327AD30008F6C68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29283C2327AD30008F6C68 /* SceneDelegate.swift */; };
+		BA2928422327AD30008F6C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2928402327AD30008F6C68 /* Main.storyboard */; };
+		BA2928442327AD32008F6C68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA2928432327AD32008F6C68 /* Assets.xcassets */; };
+		BA2928472327AD32008F6C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2928452327AD32008F6C68 /* LaunchScreen.storyboard */; };
+		BA54DFE4244D6861000BC1C7 /* ShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DFE3244D6861000BC1C7 /* ShapesViewController.swift */; };
+		BA54DFE6244D68B2000BC1C7 /* ShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DFE5244D68B2000BC1C7 /* ShapeRenderer.swift */; };
+		BA62D2D22474101300A86F24 /* ImageShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA62D2D12474101300A86F24 /* ImageShaders.metal */; };
+		BA62D2D42474149000A86F24 /* FTImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA62D2D32474149000A86F24 /* FTImageRenderer.swift */; };
+		BA6358DF244DB94C00C92B5C /* shape.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA6358DE244DB94C00C92B5C /* shape.metal */; };
+		BA758E522328EC3A0080D9DB /* ImageRenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA758E512328EC3A0080D9DB /* ImageRenderViewController.swift */; };
+		BA758E552328ED680080D9DB /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA758E542328ED680080D9DB /* ImageRenderer.swift */; };
+		BA758E58232913950080D9DB /* ImageRenderShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA758E57232913950080D9DB /* ImageRenderShaders.metal */; };
+		BA758E65232A27E90080D9DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA758E64232A27E90080D9DB /* AppDelegate.swift */; };
+		BA758E69232A27EA0080D9DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA758E68232A27EA0080D9DB /* Assets.xcassets */; };
+		BA758E6C232A27EA0080D9DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA758E6A232A27EA0080D9DB /* Main.storyboard */; };
+		BA758E72232A28880080D9DB /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA758E542328ED680080D9DB /* ImageRenderer.swift */; };
+		BA758E73232A288B0080D9DB /* ImageRenderShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA758E57232913950080D9DB /* ImageRenderShaders.metal */; };
+		BA867BDA24486DFE00D02B25 /* RoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA867BD924486DFE00D02B25 /* RoundedRectangle.swift */; };
+		BA9D9FB22338A09200284F0A /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D9FB12338A09200284F0A /* UIUtilities.swift */; };
+		BA9D9FB32338A1EC00284F0A /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D9FB12338A09200284F0A /* UIUtilities.swift */; };
+		BA9D9FB72338A4EB00284F0A /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D9FB62338A4EB00284F0A /* DrawingViewController.swift */; };
+		BA9D9FB82338A54300284F0A /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0DC2333878400F488B5 /* MetalView.swift */; };
+		BA9D9FBA2338CAD600284F0A /* RoundRobinPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D9FB92338CAD500284F0A /* RoundRobinPool.swift */; };
+		BA9D9FBB2338CAD600284F0A /* RoundRobinPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D9FB92338CAD500284F0A /* RoundRobinPool.swift */; };
+		BA9D9FC02338D56E00284F0A /* PipelineHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D9FBF2338D56E00284F0A /* PipelineHelper.swift */; };
+		BA9D9FC12338D56E00284F0A /* PipelineHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D9FBF2338D56E00284F0A /* PipelineHelper.swift */; };
+		BA9E86EE2473F031009F74A9 /* TextureRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E86ED2473F031009F74A9 /* TextureRotationViewController.swift */; };
+		BA9E86F12473F125009F74A9 /* FTImageEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E86F02473F125009F74A9 /* FTImageEncoder.swift */; };
+		BA9FD0C82331FBBF00F488B5 /* CGUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0C72331FBBF00F488B5 /* CGUtils.swift */; };
+		BA9FD0C92331FBBF00F488B5 /* CGUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0C72331FBBF00F488B5 /* CGUtils.swift */; };
+		BA9FD0CC23320C7D00F488B5 /* SIMDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0CB23320C7D00F488B5 /* SIMDUtils.swift */; };
+		BA9FD0CD23320C7D00F488B5 /* SIMDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0CB23320C7D00F488B5 /* SIMDUtils.swift */; };
+		BA9FD0D0233243D600F488B5 /* TextureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0CF233243D600F488B5 /* TextureHelper.swift */; };
+		BA9FD0D1233243D600F488B5 /* TextureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0CF233243D600F488B5 /* TextureHelper.swift */; };
+		BA9FD0D32332466100F488B5 /* Textures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9FD0D22332466100F488B5 /* Textures.xcassets */; };
+		BA9FD0D823326E7900F488B5 /* Textures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9FD0D22332466100F488B5 /* Textures.xcassets */; };
+		BA9FD0DD2333878500F488B5 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0DC2333878400F488B5 /* MetalView.swift */; };
+		BA9FD0E02333945000F488B5 /* ImageRenderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA758E66232A27E90080D9DB /* ImageRenderController.swift */; };
+		BA9FD0E223349DEE00F488B5 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0E123349DEE00F488B5 /* DrawingViewController.swift */; };
+		BA9FD0E92334A1D800F488B5 /* DrawRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0E82334A1D800F488B5 /* DrawRenderer.swift */; };
+		BA9FD0EC2334A58500F488B5 /* Drawing.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0EB2334A58500F488B5 /* Drawing.metal */; };
+		BA9FD0ED2334A58500F488B5 /* Drawing.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0EB2334A58500F488B5 /* Drawing.metal */; };
+		BAA0039024617F76005E0073 /* Shapes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA0038F24617F76005E0073 /* Shapes.storyboard */; };
+		BAA0039E24617F99005E0073 /* ShapeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0039524617F99005E0073 /* ShapeGenerator.swift */; };
+		BAA0039F24617F99005E0073 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0039624617F99005E0073 /* ShapeType.swift */; };
+		BAA003A024617F99005E0073 /* BaseShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0039824617F99005E0073 /* BaseShapeView.swift */; };
+		BAA003A124617F99005E0073 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0039924617F99005E0073 /* Ellipse.swift */; };
+		BAA003A224617F99005E0073 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0039A24617F99005E0073 /* Triangle.swift */; };
+		BAA003A324617F99005E0073 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0039B24617F99005E0073 /* Rectangle.swift */; };
+		BAA003A424617F99005E0073 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0039C24617F99005E0073 /* Star.swift */; };
+		BAA003A724617FAE005E0073 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA003A524617FAE005E0073 /* ViewController.swift */; };
+		BAA003A824617FAE005E0073 /* ShapeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA003A624617FAE005E0073 /* ShapeSelectionViewController.swift */; };
+		BAA003AE246180B4005E0073 /* ShapeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA003AD246180B4005E0073 /* ShapeUtilities.swift */; };
+		BAA003B024618986005E0073 /* RoundedRectangleCG.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA003AF24618986005E0073 /* RoundedRectangleCG.swift */; };
+		BAA6FF9A246A4BE300F9ED14 /* FTTextureQuadEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA6FF99246A4BE200F9ED14 /* FTTextureQuadEncoder.swift */; };
+		BAA6FF9C246A4C2100F9ED14 /* FTQuadEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA6FF9B246A4C2100F9ED14 /* FTQuadEncoder.swift */; };
+		BAA6FF9E246A4C5C00F9ED14 /* textureQuad.metal in Sources */ = {isa = PBXBuildFile; fileRef = BAA6FF9D246A4C5C00F9ED14 /* textureQuad.metal */; };
+		BAA6FFA0246A4E4900F9ED14 /* FTLockableBufferPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA6FF9F246A4E4900F9ED14 /* FTLockableBufferPool.swift */; };
+		BAB5929D24457CC6001FFC3D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5929C24457CC6001FFC3D /* Utilities.swift */; };
+		BAB592A124459A1C001FFC3D /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB592A024459A1C001FFC3D /* Plane.swift */; };
+		BAB592A324459A47001FFC3D /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB592A224459A47001FFC3D /* Vector.swift */; };
+		BAB592A424459A4E001FFC3D /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8BF09424446FA70013CABE /* Polygon.swift */; };
+		BAB592A724459A6D001FFC3D /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB592A524459A6D001FFC3D /* Line.swift */; };
+		BAB592A824459A6D001FFC3D /* Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB592A624459A6D001FFC3D /* Bounds.swift */; };
+		BAB592AA24459B62001FFC3D /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB592A924459B62001FFC3D /* Vertex.swift */; };
+		BAB592AC24459B77001FFC3D /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB592AB24459B77001FFC3D /* LineSegment.swift */; };
+		BAB592D12445FE6E001FFC3D /* PolygonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB592D02445FE6E001FFC3D /* PolygonsViewController.swift */; };
+		BAC11E272339FA8C0068B01A /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC11E262339FA8C0068B01A /* ToolbarViewController.swift */; };
+		BACBA4A0233B6B8400D06A4E /* TextureEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D9FC22338F19A00284F0A /* TextureEncoder.swift */; };
+		BAD0CFAF233B6D32000561EB /* DrawRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0E82334A1D800F488B5 /* DrawRenderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BA1150DC233B4CAF0052C753 /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
+		BA1805972469BF01003FC86A /* ViewController_Metal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Metal.swift; sourceTree = "<group>"; };
+		BA25EE932334E56500EAEEEF /* Brush.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Brush.xcassets; sourceTree = "<group>"; };
+		BA25EE972335060600EAEEEF /* FTBlitEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTBlitEncoder.swift; sourceTree = "<group>"; };
+		BA2928372327AD30008F6C68 /* Metallic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metallic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA29283A2327AD30008F6C68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA29283C2327AD30008F6C68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BA2928412327AD30008F6C68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA2928432327AD32008F6C68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA2928462327AD32008F6C68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA2928482327AD32008F6C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA54DFE3244D6861000BC1C7 /* ShapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesViewController.swift; sourceTree = "<group>"; };
+		BA54DFE5244D68B2000BC1C7 /* ShapeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeRenderer.swift; sourceTree = "<group>"; };
+		BA62D2D12474101300A86F24 /* ImageShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ImageShaders.metal; sourceTree = "<group>"; };
+		BA62D2D32474149000A86F24 /* FTImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTImageRenderer.swift; sourceTree = "<group>"; };
+		BA6358DE244DB94C00C92B5C /* shape.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shape.metal; sourceTree = "<group>"; };
+		BA758E512328EC3A0080D9DB /* ImageRenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderViewController.swift; sourceTree = "<group>"; };
+		BA758E542328ED680080D9DB /* ImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
+		BA758E57232913950080D9DB /* ImageRenderShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ImageRenderShaders.metal; sourceTree = "<group>"; };
+		BA758E62232A27E80080D9DB /* Metallic-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metallic-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA758E64232A27E90080D9DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA758E66232A27E90080D9DB /* ImageRenderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderController.swift; sourceTree = "<group>"; };
+		BA758E68232A27EA0080D9DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA758E6B232A27EA0080D9DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA758E6D232A27EA0080D9DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA758E6E232A27EA0080D9DB /* Metallic_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Metallic_Mac.entitlements; sourceTree = "<group>"; };
+		BA867BD924486DFE00D02B25 /* RoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangle.swift; sourceTree = "<group>"; };
+		BA8BF09424446FA70013CABE /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
+		BA9D9FB12338A09200284F0A /* UIUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtilities.swift; sourceTree = "<group>"; };
+		BA9D9FB62338A4EB00284F0A /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		BA9D9FB92338CAD500284F0A /* RoundRobinPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRobinPool.swift; sourceTree = "<group>"; };
+		BA9D9FBF2338D56E00284F0A /* PipelineHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineHelper.swift; sourceTree = "<group>"; };
+		BA9D9FC22338F19A00284F0A /* TextureEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureEncoder.swift; sourceTree = "<group>"; };
+		BA9E86ED2473F031009F74A9 /* TextureRotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureRotationViewController.swift; sourceTree = "<group>"; };
+		BA9E86F02473F125009F74A9 /* FTImageEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTImageEncoder.swift; sourceTree = "<group>"; };
+		BA9FD0C72331FBBF00F488B5 /* CGUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGUtils.swift; sourceTree = "<group>"; };
+		BA9FD0CB23320C7D00F488B5 /* SIMDUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIMDUtils.swift; sourceTree = "<group>"; };
+		BA9FD0CF233243D600F488B5 /* TextureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureHelper.swift; sourceTree = "<group>"; };
+		BA9FD0D22332466100F488B5 /* Textures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Textures.xcassets; sourceTree = "<group>"; };
+		BA9FD0DC2333878400F488B5 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		BA9FD0E123349DEE00F488B5 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		BA9FD0E82334A1D800F488B5 /* DrawRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawRenderer.swift; sourceTree = "<group>"; };
+		BA9FD0EB2334A58500F488B5 /* Drawing.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Drawing.metal; sourceTree = "<group>"; };
+		BAA0038C24617F6E005E0073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAA0038E24617F6E005E0073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAA0038F24617F76005E0073 /* Shapes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shapes.storyboard; sourceTree = "<group>"; };
+		BAA0039524617F99005E0073 /* ShapeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeGenerator.swift; sourceTree = "<group>"; };
+		BAA0039624617F99005E0073 /* ShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
+		BAA0039824617F99005E0073 /* BaseShapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseShapeView.swift; sourceTree = "<group>"; };
+		BAA0039924617F99005E0073 /* Ellipse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ellipse.swift; sourceTree = "<group>"; };
+		BAA0039A24617F99005E0073 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		BAA0039B24617F99005E0073 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		BAA0039C24617F99005E0073 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		BAA003A524617FAE005E0073 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAA003A624617FAE005E0073 /* ShapeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeSelectionViewController.swift; sourceTree = "<group>"; };
+		BAA003AD246180B4005E0073 /* ShapeUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeUtilities.swift; sourceTree = "<group>"; };
+		BAA003AF24618986005E0073 /* RoundedRectangleCG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleCG.swift; sourceTree = "<group>"; };
+		BAA6FF99246A4BE200F9ED14 /* FTTextureQuadEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTextureQuadEncoder.swift; sourceTree = "<group>"; };
+		BAA6FF9B246A4C2100F9ED14 /* FTQuadEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTQuadEncoder.swift; sourceTree = "<group>"; };
+		BAA6FF9D246A4C5C00F9ED14 /* textureQuad.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = textureQuad.metal; sourceTree = "<group>"; };
+		BAA6FF9F246A4E4900F9ED14 /* FTLockableBufferPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTLockableBufferPool.swift; sourceTree = "<group>"; };
+		BAB5929C24457CC6001FFC3D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		BAB592A024459A1C001FFC3D /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		BAB592A224459A47001FFC3D /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		BAB592A524459A6D001FFC3D /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		BAB592A624459A6D001FFC3D /* Bounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounds.swift; sourceTree = "<group>"; };
+		BAB592A924459B62001FFC3D /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		BAB592AB24459B77001FFC3D /* LineSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
+		BAB592D02445FE6E001FFC3D /* PolygonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonsViewController.swift; sourceTree = "<group>"; };
+		BAC11E262339FA8C0068B01A /* ToolbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA2928342327AD30008F6C68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA758E5F232A27E80080D9DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA1805992469C1AE003FC86A /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				BA9FD0E123349DEE00F488B5 /* DrawingViewController.swift */,
+				BA758E512328EC3A0080D9DB /* ImageRenderViewController.swift */,
+				BAC11E262339FA8C0068B01A /* ToolbarViewController.swift */,
+				BAB592D02445FE6E001FFC3D /* PolygonsViewController.swift */,
+				BA54DFE3244D6861000BC1C7 /* ShapesViewController.swift */,
+				BA9E86ED2473F031009F74A9 /* TextureRotationViewController.swift */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		BA25EE922334E55500EAEEEF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BA25EE932334E56500EAEEEF /* Brush.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BA29282E2327AD30008F6C68 = {
+			isa = PBXGroup;
+			children = (
+				BA9FD0E623349EAB00F488B5 /* Metallic Renderer */,
+				BA2928392327AD30008F6C68 /* Metallic */,
+				BA758E63232A27E80080D9DB /* Metallic-Mac */,
+				BA2928382327AD30008F6C68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA2928382327AD30008F6C68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA2928372327AD30008F6C68 /* Metallic.app */,
+				BA758E62232A27E80080D9DB /* Metallic-Mac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA2928392327AD30008F6C68 /* Metallic */ = {
+			isa = PBXGroup;
+			children = (
+				BA9FD0E523349E1400F488B5 /* Application */,
+				BA9FD0E423349DFF00F488B5 /* Controllers */,
+				BA2928482327AD32008F6C68 /* Info.plist */,
+			);
+			path = Metallic;
+			sourceTree = "<group>";
+		};
+		BA758E532328ED460080D9DB /* Image Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				BA9E86EF2473F06D009F74A9 /* encoding */,
+				BA9FD0C52331FB8500F488B5 /* Assets */,
+				BA9E86F02473F125009F74A9 /* FTImageEncoder.swift */,
+				BA62D2D32474149000A86F24 /* FTImageRenderer.swift */,
+				BA62D2D12474101300A86F24 /* ImageShaders.metal */,
+			);
+			path = "Image Rendering";
+			sourceTree = "<group>";
+		};
+		BA758E63232A27E80080D9DB /* Metallic-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				BA758E64232A27E90080D9DB /* AppDelegate.swift */,
+				BA758E66232A27E90080D9DB /* ImageRenderController.swift */,
+				BA9D9FB62338A4EB00284F0A /* DrawingViewController.swift */,
+				BA758E68232A27EA0080D9DB /* Assets.xcassets */,
+				BA758E6A232A27EA0080D9DB /* Main.storyboard */,
+				BA758E6D232A27EA0080D9DB /* Info.plist */,
+				BA758E6E232A27EA0080D9DB /* Metallic_Mac.entitlements */,
+			);
+			path = "Metallic-Mac";
+			sourceTree = "<group>";
+		};
+		BA9E86EF2473F06D009F74A9 /* encoding */ = {
+			isa = PBXGroup;
+			children = (
+				BAA6FF9D246A4C5C00F9ED14 /* textureQuad.metal */,
+				BAA6FF99246A4BE200F9ED14 /* FTTextureQuadEncoder.swift */,
+				BAA6FF9B246A4C2100F9ED14 /* FTQuadEncoder.swift */,
+				BA758E57232913950080D9DB /* ImageRenderShaders.metal */,
+				BA758E542328ED680080D9DB /* ImageRenderer.swift */,
+			);
+			path = encoding;
+			sourceTree = "<group>";
+		};
+		BA9FD0C52331FB8500F488B5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BA9FD0D22332466100F488B5 /* Textures.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BA9FD0C62331FB9D00F488B5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BA25EE972335060600EAEEEF /* FTBlitEncoder.swift */,
+				BA9D9FC22338F19A00284F0A /* TextureEncoder.swift */,
+				BA9FD0C72331FBBF00F488B5 /* CGUtils.swift */,
+				BAA6FF9F246A4E4900F9ED14 /* FTLockableBufferPool.swift */,
+				BA9FD0CB23320C7D00F488B5 /* SIMDUtils.swift */,
+				BA9D9FB12338A09200284F0A /* UIUtilities.swift */,
+				BA9FD0CF233243D600F488B5 /* TextureHelper.swift */,
+				BA9D9FBF2338D56E00284F0A /* PipelineHelper.swift */,
+				BA9D9FB92338CAD500284F0A /* RoundRobinPool.swift */,
+				BA1150DC233B4CAF0052C753 /* MetalBuffer.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BA9FD0E423349DFF00F488B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA2928402327AD30008F6C68 /* Main.storyboard */,
+				BAA0039124617F84005E0073 /* CGShapes */,
+				BA1805992469C1AE003FC86A /* Metal */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BA9FD0E523349E1400F488B5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BAA0038A24617F6E005E0073 /* Storyboards */,
+				BA29283A2327AD30008F6C68 /* AppDelegate.swift */,
+				BA29283C2327AD30008F6C68 /* SceneDelegate.swift */,
+				BA2928432327AD32008F6C68 /* Assets.xcassets */,
+				BA2928452327AD32008F6C68 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BA9FD0E623349EAB00F488B5 /* Metallic Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				BAB592AD2445CAB4001FFC3D /* Euclid */,
+				BA9FD0DC2333878400F488B5 /* MetalView.swift */,
+				BA9FD0C62331FB9D00F488B5 /* Utils */,
+				BA758E532328ED460080D9DB /* Image Rendering */,
+				BA9FD0E72334A18000F488B5 /* Drawing */,
+			);
+			path = "Metallic Renderer";
+			sourceTree = "<group>";
+		};
+		BA9FD0E72334A18000F488B5 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				BA25EE922334E55500EAEEEF /* Assets */,
+				BA9FD0E82334A1D800F488B5 /* DrawRenderer.swift */,
+				BA9FD0EB2334A58500F488B5 /* Drawing.metal */,
+				BA54DFE5244D68B2000BC1C7 /* ShapeRenderer.swift */,
+				BA867BD924486DFE00D02B25 /* RoundedRectangle.swift */,
+				BA6358DE244DB94C00C92B5C /* shape.metal */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		BAA0038A24617F6E005E0073 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BAA0038B24617F6E005E0073 /* LaunchScreen.storyboard */,
+				BAA0038D24617F6E005E0073 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			path = "../../../../../Downloads/shapes-master/Shapes/Storyboards";
+			sourceTree = "<group>";
+		};
+		BAA0039124617F84005E0073 /* CGShapes */ = {
+			isa = PBXGroup;
+			children = (
+				BAA0039424617F99005E0073 /* Shape */,
+				BAA003A624617FAE005E0073 /* ShapeSelectionViewController.swift */,
+				BAA003A524617FAE005E0073 /* ViewController.swift */,
+				BA1805972469BF01003FC86A /* ViewController_Metal.swift */,
+				BAA0038F24617F76005E0073 /* Shapes.storyboard */,
+			);
+			path = CGShapes;
+			sourceTree = "<group>";
+		};
+		BAA0039424617F99005E0073 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				BAA0039524617F99005E0073 /* ShapeGenerator.swift */,
+				BAA0039624617F99005E0073 /* ShapeType.swift */,
+				BAA0039724617F99005E0073 /* Shapes */,
+			);
+			name = Shape;
+			path = "../../../../../../Downloads/shapes-master/Shapes/Shape";
+			sourceTree = "<group>";
+		};
+		BAA0039724617F99005E0073 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				BAA003AD246180B4005E0073 /* ShapeUtilities.swift */,
+				BAA0039824617F99005E0073 /* BaseShapeView.swift */,
+				BAA0039924617F99005E0073 /* Ellipse.swift */,
+				BAA0039A24617F99005E0073 /* Triangle.swift */,
+				BAA0039B24617F99005E0073 /* Rectangle.swift */,
+				BAA003AF24618986005E0073 /* RoundedRectangleCG.swift */,
+				BAA0039C24617F99005E0073 /* Star.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		BAB592AD2445CAB4001FFC3D /* Euclid */ = {
+			isa = PBXGroup;
+			children = (
+				BAB5929C24457CC6001FFC3D /* Utilities.swift */,
+				BA8BF09424446FA70013CABE /* Polygon.swift */,
+				BAB592A624459A6D001FFC3D /* Bounds.swift */,
+				BAB592A524459A6D001FFC3D /* Line.swift */,
+				BAB592A924459B62001FFC3D /* Vertex.swift */,
+				BAB592A224459A47001FFC3D /* Vector.swift */,
+				BAB592AB24459B77001FFC3D /* LineSegment.swift */,
+				BAB592A024459A1C001FFC3D /* Plane.swift */,
+			);
+			path = Euclid;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA2928362327AD30008F6C68 /* Metallic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA29284B2327AD32008F6C68 /* Build configuration list for PBXNativeTarget "Metallic" */;
+			buildPhases = (
+				BA2928332327AD30008F6C68 /* Sources */,
+				BA2928342327AD30008F6C68 /* Frameworks */,
+				BA2928352327AD30008F6C68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Metallic;
+			productName = Metallic;
+			productReference = BA2928372327AD30008F6C68 /* Metallic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA758E61232A27E80080D9DB /* Metallic-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA758E6F232A27EA0080D9DB /* Build configuration list for PBXNativeTarget "Metallic-Mac" */;
+			buildPhases = (
+				BA758E5E232A27E80080D9DB /* Sources */,
+				BA758E5F232A27E80080D9DB /* Frameworks */,
+				BA758E60232A27E80080D9DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Metallic-Mac";
+			productName = "Metallic-Mac";
+			productReference = BA758E62232A27E80080D9DB /* Metallic-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA29282F2327AD30008F6C68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Fluid Touch Pte Ltd";
+				TargetAttributes = {
+					BA2928362327AD30008F6C68 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					BA758E61232A27E80080D9DB = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = BA2928322327AD30008F6C68 /* Build configuration list for PBXProject "Metallic" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA29282E2327AD30008F6C68;
+			productRefGroup = BA2928382327AD30008F6C68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA2928362327AD30008F6C68 /* Metallic */,
+				BA758E61232A27E80080D9DB /* Metallic-Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA2928352327AD30008F6C68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA2928472327AD32008F6C68 /* LaunchScreen.storyboard in Resources */,
+				BA2928442327AD32008F6C68 /* Assets.xcassets in Resources */,
+				BA9FD0D32332466100F488B5 /* Textures.xcassets in Resources */,
+				BAA0039024617F76005E0073 /* Shapes.storyboard in Resources */,
+				BA25EE942334E56500EAEEEF /* Brush.xcassets in Resources */,
+				BA2928422327AD30008F6C68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA758E60232A27E80080D9DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9FD0D823326E7900F488B5 /* Textures.xcassets in Resources */,
+				BA758E69232A27EA0080D9DB /* Assets.xcassets in Resources */,
+				BA758E6C232A27EA0080D9DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA2928332327AD30008F6C68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9FD0CC23320C7D00F488B5 /* SIMDUtils.swift in Sources */,
+				BA758E58232913950080D9DB /* ImageRenderShaders.metal in Sources */,
+				BAA6FF9A246A4BE300F9ED14 /* FTTextureQuadEncoder.swift in Sources */,
+				BAB592A324459A47001FFC3D /* Vector.swift in Sources */,
+				BAA003A324617F99005E0073 /* Rectangle.swift in Sources */,
+				BAA003A224617F99005E0073 /* Triangle.swift in Sources */,
+				BAB5929D24457CC6001FFC3D /* Utilities.swift in Sources */,
+				BA54DFE6244D68B2000BC1C7 /* ShapeRenderer.swift in Sources */,
+				BAB592A724459A6D001FFC3D /* Line.swift in Sources */,
+				BAA003A724617FAE005E0073 /* ViewController.swift in Sources */,
+				BAA6FF9E246A4C5C00F9ED14 /* textureQuad.metal in Sources */,
+				BA9FD0EC2334A58500F488B5 /* Drawing.metal in Sources */,
+				BA9FD0C82331FBBF00F488B5 /* CGUtils.swift in Sources */,
+				BA867BDA24486DFE00D02B25 /* RoundedRectangle.swift in Sources */,
+				BAA003AE246180B4005E0073 /* ShapeUtilities.swift in Sources */,
+				BAB592AC24459B77001FFC3D /* LineSegment.swift in Sources */,
+				BAA6FFA0246A4E4900F9ED14 /* FTLockableBufferPool.swift in Sources */,
+				BA758E522328EC3A0080D9DB /* ImageRenderViewController.swift in Sources */,
+				BA9E86F12473F125009F74A9 /* FTImageEncoder.swift in Sources */,
+				BAA0039E24617F99005E0073 /* ShapeGenerator.swift in Sources */,
+				BAA0039F24617F99005E0073 /* ShapeType.swift in Sources */,
+				BA54DFE4244D6861000BC1C7 /* ShapesViewController.swift in Sources */,
+				BA9D9FC02338D56E00284F0A /* PipelineHelper.swift in Sources */,
+				BAB592A424459A4E001FFC3D /* Polygon.swift in Sources */,
+				BA1150DD233B4CAF0052C753 /* MetalBuffer.swift in Sources */,
+				BAC11E272339FA8C0068B01A /* ToolbarViewController.swift in Sources */,
+				BA9D9FBA2338CAD600284F0A /* RoundRobinPool.swift in Sources */,
+				BA9FD0DD2333878500F488B5 /* MetalView.swift in Sources */,
+				BAA6FF9C246A4C2100F9ED14 /* FTQuadEncoder.swift in Sources */,
+				BAB592A824459A6D001FFC3D /* Bounds.swift in Sources */,
+				BAA003B024618986005E0073 /* RoundedRectangleCG.swift in Sources */,
+				BAA003A424617F99005E0073 /* Star.swift in Sources */,
+				BAA003A124617F99005E0073 /* Ellipse.swift in Sources */,
+				BA62D2D22474101300A86F24 /* ImageShaders.metal in Sources */,
+				BAB592A124459A1C001FFC3D /* Plane.swift in Sources */,
+				BA29283B2327AD30008F6C68 /* AppDelegate.swift in Sources */,
+				BA29283D2327AD30008F6C68 /* SceneDelegate.swift in Sources */,
+				BA9D9FB22338A09200284F0A /* UIUtilities.swift in Sources */,
+				BAB592D12445FE6E001FFC3D /* PolygonsViewController.swift in Sources */,
+				BA9FD0D0233243D600F488B5 /* TextureHelper.swift in Sources */,
+				BA62D2D42474149000A86F24 /* FTImageRenderer.swift in Sources */,
+				BA1805982469BF01003FC86A /* ViewController_Metal.swift in Sources */,
+				BAB592AA24459B62001FFC3D /* Vertex.swift in Sources */,
+				BA9FD0E92334A1D800F488B5 /* DrawRenderer.swift in Sources */,
+				BA25EE982335060600EAEEEF /* FTBlitEncoder.swift in Sources */,
+				BA9E86EE2473F031009F74A9 /* TextureRotationViewController.swift in Sources */,
+				BACBA4A0233B6B8400D06A4E /* TextureEncoder.swift in Sources */,
+				BAA003A824617FAE005E0073 /* ShapeSelectionViewController.swift in Sources */,
+				BA6358DF244DB94C00C92B5C /* shape.metal in Sources */,
+				BAA003A024617F99005E0073 /* BaseShapeView.swift in Sources */,
+				BA758E552328ED680080D9DB /* ImageRenderer.swift in Sources */,
+				BA9FD0E223349DEE00F488B5 /* DrawingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA758E5E232A27E80080D9DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA758E72232A28880080D9DB /* ImageRenderer.swift in Sources */,
+				BA1150DE233B4CB30052C753 /* MetalBuffer.swift in Sources */,
+				BAD0CFAF233B6D32000561EB /* DrawRenderer.swift in Sources */,
+				BA9D9FC12338D56E00284F0A /* PipelineHelper.swift in Sources */,
+				BA9D9FB72338A4EB00284F0A /* DrawingViewController.swift in Sources */,
+				BA9FD0ED2334A58500F488B5 /* Drawing.metal in Sources */,
+				BA9FD0CD23320C7D00F488B5 /* SIMDUtils.swift in Sources */,
+				BA9D9FB82338A54300284F0A /* MetalView.swift in Sources */,
+				BA758E73232A288B0080D9DB /* ImageRenderShaders.metal in Sources */,
+				BA758E65232A27E90080D9DB /* AppDelegate.swift in Sources */,
+				BA9D9FBB2338CAD600284F0A /* RoundRobinPool.swift in Sources */,
+				BA9FD0E02333945000F488B5 /* ImageRenderController.swift in Sources */,
+				BA9FD0D1233243D600F488B5 /* TextureHelper.swift in Sources */,
+				BA25EE992335060600EAEEEF /* FTBlitEncoder.swift in Sources */,
+				BA9D9FB32338A1EC00284F0A /* UIUtilities.swift in Sources */,
+				BA9FD0C92331FBBF00F488B5 /* CGUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BA2928402327AD30008F6C68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA2928412327AD30008F6C68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA2928452327AD32008F6C68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA2928462327AD32008F6C68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BA758E6A232A27EA0080D9DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA758E6B232A27EA0080D9DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAA0038B24617F6E005E0073 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAA0038C24617F6E005E0073 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BAA0038D24617F6E005E0073 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAA0038E24617F6E005E0073 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA2928492327AD32008F6C68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA29284A2327AD32008F6C68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA29284C2327AD32008F6C68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNTLGGQX2J;
+				INFOPLIST_FILE = Metallic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluidtouch.-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA29284D2327AD32008F6C68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNTLGGQX2J;
+				INFOPLIST_FILE = Metallic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluidtouch.-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA758E70232A27EA0080D9DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Metallic-Mac/Metallic_Mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Metallic-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluidtouch.Metallic-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BA758E71232A27EA0080D9DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Metallic-Mac/Metallic_Mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Metallic-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluidtouch.Metallic-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA2928322327AD30008F6C68 /* Build configuration list for PBXProject "Metallic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA2928492327AD32008F6C68 /* Debug */,
+				BA29284A2327AD32008F6C68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA29284B2327AD32008F6C68 /* Build configuration list for PBXNativeTarget "Metallic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA29284C2327AD32008F6C68 /* Debug */,
+				BA29284D2327AD32008F6C68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA758E6F232A27EA0080D9DB /* Build configuration list for PBXNativeTarget "Metallic-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA758E70232A27EA0080D9DB /* Debug */,
+				BA758E71232A27EA0080D9DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA29282F2327AD30008F6C68 /* Project object */;
+}
