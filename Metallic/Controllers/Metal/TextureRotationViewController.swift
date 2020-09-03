@@ -10,10 +10,10 @@ import UIKit
 
 class TextureRotationViewController: UIViewController {
 
-    let image = UIImage(named: "A")!
-    var renderer : FTImageRenderer!
-    let rect = CGRect(x: 200, y: 200, width: 500, height: 500)
-    var angle : Float = 0
+    private let image = UIImage(named: "C")!
+    private var renderer : FTImageRenderer!
+    private var rect : CGRect!
+    private var angle : Float = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,17 @@ class TextureRotationViewController: UIViewController {
         }
 
         renderer = FTImageRenderer(layer: layer)
+        renderImage()
+    }
 
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        renderer.updateSize(size)
+        renderImage()
+    }
+
+    private func renderImage() {
+        rect = CGRect(origin: CGPoint(x: self.view.bounds.midX-250, y: self.view.bounds.midY-250), size: CGSize(width: 500, height: 500))
         renderer.render(image: image, rect: rect, angle: angle)
     }
 

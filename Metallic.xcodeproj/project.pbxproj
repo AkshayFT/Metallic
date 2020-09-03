@@ -20,7 +20,7 @@
 		BA2928472327AD32008F6C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2928452327AD32008F6C68 /* LaunchScreen.storyboard */; };
 		BA54DFE4244D6861000BC1C7 /* ShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DFE3244D6861000BC1C7 /* ShapesViewController.swift */; };
 		BA54DFE6244D68B2000BC1C7 /* ShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DFE5244D68B2000BC1C7 /* ShapeRenderer.swift */; };
-		BA62D2D22474101300A86F24 /* ImageShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA62D2D12474101300A86F24 /* ImageShaders.metal */; };
+		BA62D2D22474101300A86F24 /* ImageWithAngle.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA62D2D12474101300A86F24 /* ImageWithAngle.metal */; };
 		BA62D2D42474149000A86F24 /* FTImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA62D2D32474149000A86F24 /* FTImageRenderer.swift */; };
 		BA6358DF244DB94C00C92B5C /* shape.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA6358DE244DB94C00C92B5C /* shape.metal */; };
 		BA758E522328EC3A0080D9DB /* ImageRenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA758E512328EC3A0080D9DB /* ImageRenderViewController.swift */; };
@@ -41,7 +41,7 @@
 		BA9D9FC02338D56E00284F0A /* PipelineHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D9FBF2338D56E00284F0A /* PipelineHelper.swift */; };
 		BA9D9FC12338D56E00284F0A /* PipelineHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D9FBF2338D56E00284F0A /* PipelineHelper.swift */; };
 		BA9E86EE2473F031009F74A9 /* TextureRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E86ED2473F031009F74A9 /* TextureRotationViewController.swift */; };
-		BA9E86F12473F125009F74A9 /* FTImageEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E86F02473F125009F74A9 /* FTImageEncoder.swift */; };
+		BA9E86F12473F125009F74A9 /* FTImageWithAngleEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E86F02473F125009F74A9 /* FTImageWithAngleEncoder.swift */; };
 		BA9FD0C82331FBBF00F488B5 /* CGUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0C72331FBBF00F488B5 /* CGUtils.swift */; };
 		BA9FD0C92331FBBF00F488B5 /* CGUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0C72331FBBF00F488B5 /* CGUtils.swift */; };
 		BA9FD0CC23320C7D00F488B5 /* SIMDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0CB23320C7D00F488B5 /* SIMDUtils.swift */; };
@@ -100,7 +100,7 @@
 		BA2928482327AD32008F6C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA54DFE3244D6861000BC1C7 /* ShapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesViewController.swift; sourceTree = "<group>"; };
 		BA54DFE5244D68B2000BC1C7 /* ShapeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeRenderer.swift; sourceTree = "<group>"; };
-		BA62D2D12474101300A86F24 /* ImageShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ImageShaders.metal; sourceTree = "<group>"; };
+		BA62D2D12474101300A86F24 /* ImageWithAngle.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ImageWithAngle.metal; sourceTree = "<group>"; };
 		BA62D2D32474149000A86F24 /* FTImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTImageRenderer.swift; sourceTree = "<group>"; };
 		BA6358DE244DB94C00C92B5C /* shape.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shape.metal; sourceTree = "<group>"; };
 		BA758E512328EC3A0080D9DB /* ImageRenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		BA9D9FBF2338D56E00284F0A /* PipelineHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineHelper.swift; sourceTree = "<group>"; };
 		BA9D9FC22338F19A00284F0A /* TextureEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureEncoder.swift; sourceTree = "<group>"; };
 		BA9E86ED2473F031009F74A9 /* TextureRotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureRotationViewController.swift; sourceTree = "<group>"; };
-		BA9E86F02473F125009F74A9 /* FTImageEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTImageEncoder.swift; sourceTree = "<group>"; };
+		BA9E86F02473F125009F74A9 /* FTImageWithAngleEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTImageWithAngleEncoder.swift; sourceTree = "<group>"; };
 		BA9FD0C72331FBBF00F488B5 /* CGUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGUtils.swift; sourceTree = "<group>"; };
 		BA9FD0CB23320C7D00F488B5 /* SIMDUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIMDUtils.swift; sourceTree = "<group>"; };
 		BA9FD0CF233243D600F488B5 /* TextureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureHelper.swift; sourceTree = "<group>"; };
@@ -232,9 +232,9 @@
 			children = (
 				BA9E86EF2473F06D009F74A9 /* encoding */,
 				BA9FD0C52331FB8500F488B5 /* Assets */,
-				BA9E86F02473F125009F74A9 /* FTImageEncoder.swift */,
+				BA9E86F02473F125009F74A9 /* FTImageWithAngleEncoder.swift */,
 				BA62D2D32474149000A86F24 /* FTImageRenderer.swift */,
-				BA62D2D12474101300A86F24 /* ImageShaders.metal */,
+				BA62D2D12474101300A86F24 /* ImageWithAngle.metal */,
 			);
 			path = "Image Rendering";
 			sourceTree = "<group>";
@@ -522,7 +522,7 @@
 				BAB592AC24459B77001FFC3D /* LineSegment.swift in Sources */,
 				BAA6FFA0246A4E4900F9ED14 /* FTLockableBufferPool.swift in Sources */,
 				BA758E522328EC3A0080D9DB /* ImageRenderViewController.swift in Sources */,
-				BA9E86F12473F125009F74A9 /* FTImageEncoder.swift in Sources */,
+				BA9E86F12473F125009F74A9 /* FTImageWithAngleEncoder.swift in Sources */,
 				BAA0039E24617F99005E0073 /* ShapeGenerator.swift in Sources */,
 				BAA0039F24617F99005E0073 /* ShapeType.swift in Sources */,
 				BA54DFE4244D6861000BC1C7 /* ShapesViewController.swift in Sources */,
@@ -537,7 +537,7 @@
 				BAA003B024618986005E0073 /* RoundedRectangleCG.swift in Sources */,
 				BAA003A424617F99005E0073 /* Star.swift in Sources */,
 				BAA003A124617F99005E0073 /* Ellipse.swift in Sources */,
-				BA62D2D22474101300A86F24 /* ImageShaders.metal in Sources */,
+				BA62D2D22474101300A86F24 /* ImageWithAngle.metal in Sources */,
 				BAB592A124459A1C001FFC3D /* Plane.swift in Sources */,
 				BA29283B2327AD30008F6C68 /* AppDelegate.swift in Sources */,
 				BA29283D2327AD30008F6C68 /* SceneDelegate.swift in Sources */,

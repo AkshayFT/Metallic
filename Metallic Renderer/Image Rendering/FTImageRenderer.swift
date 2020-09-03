@@ -10,7 +10,7 @@ import MetalKit
 
 final class FTImageRenderer {
 
-    private let mvpBuffer : MTLBuffer
+    private var mvpBuffer : MTLBuffer
     private var layer: CAMetalLayer
 
     private let commandQueue = mtlDevice.makeCommandQueue()!
@@ -25,6 +25,14 @@ final class FTImageRenderer {
                                          options: .storageModeShared)!
     }
 
+    func updateSize(_ vpSize: CGSize) {
+        var projection = simd_float4x4.ortho2d(width: Float(vpSize.width),
+                                               height: Float(vpSize.height))        
+        mvpBuffer = mtlDevice.makeBuffer(bytes: &projection,
+                                         length: MemoryLayout<simd_float4x4>.stride,
+                                         options: .storageModeShared)!
+    }
+
     func render(image: UIImage, rect: CGRect, angle: Float) {
 
         guard let commandBuffer = commandQueue.makeCommandBuffer(), let drawble = layer.nextDrawable() else {
@@ -33,7 +41,8 @@ final class FTImageRenderer {
         let textureLoader = MTKTextureLoader(device: mtlDevice)
         let texture = textureLoader.texture(with: image)
 
-        let imageRender = FTImageEncoder()
+//        let texture = TextureHelper.texture(with: image, multiSample: true)
+        let imageRender = FTImageWithAngleEncoder()
         imageRender.encode(texture: texture,
                            rect: rect,
                            angle: angle,
@@ -53,8 +62,8 @@ extension MTKTextureLoader {
             preconditionFailure("Unable to convert image to cgImage")
         }
         do {
-            let options : [MTKTextureLoader.Option: Any] = [MTKTextureLoader.Option.allocateMipmaps : false,
-                                                            MTKTextureLoader.Option.generateMipmaps : false,
+            let options : [MTKTextureLoader.Option: Any] = [MTKTextureLoader.Option.allocateMipmaps : true,
+                                                            MTKTextureLoader.Option.generateMipmaps : true,
                                                             MTKTextureLoader.Option.origin: MTKTextureLoader.Origin.bottomLeft]
             let texture = try self.newTexture(cgImage: cgImage,
                                               options: loadOptions ?? options)

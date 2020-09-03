@@ -73,13 +73,14 @@ class PipelineHelper {
     }
 
     static func createTexturePipeline(pixelFormat: MTLPixelFormat) throws -> MTLRenderPipelineState  {
-          let descriptor = MTLRenderPipelineDescriptor()
-          let library = mtlDevice.makeDefaultLibrary()!
-          descriptor.vertexFunction = library.makeFunction(name: "vertexShaderImage")
-          descriptor.fragmentFunction = library.makeFunction(name: "fragmentShaderImage")
-          descriptor.colorAttachments[0].pixelFormat = pixelFormat
-          return try mtlDevice.makeRenderPipelineState(descriptor: descriptor)
-      }
+        let descriptor = MTLRenderPipelineDescriptor()
+        let library = mtlDevice.makeDefaultLibrary()!
+        descriptor.vertexFunction = library.makeFunction(name: "vertexShaderImage")
+        descriptor.fragmentFunction = library.makeFunction(name: "fragmentShaderImage")
+        descriptor.colorAttachments[0].pixelFormat = pixelFormat
+        descriptor.sampleCount = 4
+        return try mtlDevice.makeRenderPipelineState(descriptor: descriptor)
+    }
 }
 
 //MARK: - Private

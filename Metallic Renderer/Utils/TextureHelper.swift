@@ -15,24 +15,16 @@ import UIKit
 
 final class TextureHelper {
 
-    static func texture(with image:UIImage) -> MTLTexture {
+    static func texture(with image:UIImage, multiSample: Bool = false) -> MTLTexture {
         guard let cgImage = image.cgImage else {
             preconditionFailure("Unable to convert image to cgImage")
         }
-        do {
-            let loadOptions : [MTKTextureLoader.Option: Any] = [MTKTextureLoader.Option.allocateMipmaps : false,
-                                                                MTKTextureLoader.Option.generateMipmaps : false,
-                                                                MTKTextureLoader.Option.origin: MTKTextureLoader.Origin.bottomLeft]
-            let loader = MTKTextureLoader(device: mtlDevice)
-            let texture = try loader.newTexture(cgImage: cgImage,
-                                                options: loadOptions)
-            return texture
-        } catch {
-            preconditionFailure("Unable to create Texture")
-        }
+
+        let texture = createTexture(for:cgImage)
+        return texture
     }
 
-    static func createTexture(for imageRef:CGImage, device:MTLDevice) -> MTLTexture {
+    static func createTexture(for imageRef:CGImage, device:MTLDevice = mtlDevice) -> MTLTexture {
         let width = imageRef.width
         let height = imageRef.height
         let colorSpace = CGColorSpaceCreateDeviceRGB()
