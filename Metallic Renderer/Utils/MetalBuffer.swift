@@ -26,7 +26,7 @@ class FTMetalBuffer<T> : RoundRobinConfirm,Equatable {
 
         var length = vertices.count;
         if(self.expand > 0) {
-            length += self.expand;
+            length += 0;
         }
         let bufferLength =  MemoryLayout<T>.stride * length
         self.buffer = mtlDevice.makeBuffer(bytes: vertices, length: bufferLength, options: [.cpuCacheModeWriteCombined])!

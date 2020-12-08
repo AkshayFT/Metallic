@@ -8,10 +8,6 @@
 
 import MetalKit
 
-private struct FTTextureVertex {
-    var position : SIMD2<Float>
-    var textureCoordinate : SIMD2<Float>
-}
 private struct FTTextureCoordinate {
     static let topLeft = SIMD2<Float>(0.0,0.0)
     static let topRight = SIMD2<Float>(1.0,0.0)
@@ -79,6 +75,7 @@ private extension FTImageWithAngleEncoder {
         descriptor.pixelFormat = texture.pixelFormat
         descriptor.width = texture.width
         descriptor.height = texture.height
+        descriptor.storageMode = .private
         
         guard let texture = mtlDevice.makeTexture(descriptor: descriptor) else {
             fatalError("Unable to create Texture")
@@ -100,16 +97,16 @@ private extension FTImageWithAngleEncoder {
         let bottomRight = rotate(vector: aspectRect.bottomRight, angle: angle, tx: tx, ty: ty)
         
         let tl = FTTextureVertex(position: topLeft,
-                                 textureCoordinate: FTTextureCoordinate.topLeft)
+                                 coordinate: FTTextureCoordinate.topLeft)
         
         let tr = FTTextureVertex(position: topRight,
-                                 textureCoordinate: FTTextureCoordinate.topRight)
+                                 coordinate: FTTextureCoordinate.topRight)
         
         let bl = FTTextureVertex(position: bottomLeft,
-                                 textureCoordinate: FTTextureCoordinate.bottomLeft)
+                                 coordinate: FTTextureCoordinate.bottomLeft)
         
         let br = FTTextureVertex(position: bottomRight,
-                                 textureCoordinate: FTTextureCoordinate.bottomRight)
+                                 coordinate: FTTextureCoordinate.bottomRight)
         
         return [tl,tr,bl,br]
     }

@@ -20,11 +20,11 @@ extension ViewController {
 //                                           width: 150,
 //                                           height: 200,
 //                                           cornerRadius: 50)
-        if let roundedRectView = shapeView as? RoundedRectangleCG {
-            var roundedRect = roundedRectView.rectangle!
-            roundedRect.origin = roundedRectView.frame.origin
-            let renderer = DrawRenderer(metalLayer: layer)
-            roundedRect.draw(roundedRect: roundedRect, renderer: renderer)
-        }
+//        if let roundedRectView = shapeView as? RoundedRectangleCG {
+//            var roundedRect = roundedRectView.rectangle!
+//            roundedRect.origin = roundedRectView.frame.origin
+//            let renderer = DrawRenderer(metalLayer: layer)
+//            roundedRect.draw(roundedRect: roundedRect, renderer: renderer)
+//        }
     }
 }

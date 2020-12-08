@@ -81,6 +81,16 @@ class PipelineHelper {
         descriptor.sampleCount = 4
         return try mtlDevice.makeRenderPipelineState(descriptor: descriptor)
     }
+
+    static func createTileTexturePipeline(pixelFormat: MTLPixelFormat) throws -> MTLRenderPipelineState  {
+        let descriptor = MTLRenderPipelineDescriptor()
+        let library = mtlDevice.makeDefaultLibrary()!
+        descriptor.vertexFunction = library.makeFunction(name: "vertexTileImageShader")
+        descriptor.fragmentFunction = library.makeFunction(name: "fragmentTileImageShader")
+        descriptor.colorAttachments[0].pixelFormat = pixelFormat
+        descriptor.sampleCount = 1
+        return try mtlDevice.makeRenderPipelineState(descriptor: descriptor)
+    }
 }
 
 //MARK: - Private

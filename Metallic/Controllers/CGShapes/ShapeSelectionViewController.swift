@@ -29,7 +29,7 @@ extension ShapeSelectionViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shapeCell", for: indexPath)
-        cell.textLabel?.text = shapes[indexPath.row].rawValue.firstCapitalized
+        cell.textLabel?.text = shapes[indexPath.row].rawValue
         return cell
     }
     

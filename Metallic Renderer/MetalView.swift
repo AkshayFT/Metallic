@@ -16,6 +16,21 @@ class MetalView: PlatformView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        setup()
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    private func setup() {
+        self.backgroundColor = .red
         if let mtlLayer = self.layer as? CAMetalLayer {
             self.metalLayer = mtlLayer
             self.metalLayer.device = mtlDevice
@@ -51,5 +66,27 @@ extension MetalView {
 private extension MetalView {
     func updateDrawbleSize() {
         self.metalLayer.drawableSize = self.bounds.integral.size.scaled(to: 1.0)
+    }
+}
+
+extension UIScreen
+{
+    var maxDimension: CGFloat {
+        let screenBounds = coordinateSpace.convert(self.bounds, to: self.fixedCoordinateSpace);
+        let maxValue = max(screenBounds.width, screenBounds.height);
+        #if targetEnvironment(macCatalyst)
+        let mainScreen = UIScreen.main;
+        return maxValue * mainScreen.scale * 2;
+        #else
+        return maxValue;
+        #endif
+    }
+
+    static var screenContentScale : CGFloat {
+        #if targetEnvironment(macCatalyst)
+        return globalScreenScale;
+        #else
+        return UIScreen.main.scale;
+        #endif
     }
 }
