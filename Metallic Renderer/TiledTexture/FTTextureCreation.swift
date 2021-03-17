@@ -14,30 +14,17 @@ let maxTextureSize : Int = 4096;//max texture size allowed in metal is 16384;
 let bytesPerPixel = 4
 
 final class FTTextureCreation {
-//    static func texture(forPage page: PDFPage, toFitIn rect:CGRect, scale: CGFloat) -> MTLTexture? {
-//        let texture = generateBGImage(for: page, targetRect: rect, scale:scale)
-//        return texture
-//    }
 
-//    static func textures(forPage page: PDFPage, tileRects:[CGRect], scale: CGFloat) -> MTLTexture {
-//        guard let texture = createTextures(for: page, tileRects: tileRects, scale:scale) else {
-//            fatalError("Texture is nil")
-//        }
-//
-//        return texture
-//    }
-
-
-    static func tiles(forPage page: PDFPage, tileRects:[CGRect], scale: CGFloat) -> [TextureTile] {
-        let textureTiles = createTextures(for: page, tileRects: tileRects, scale:scale)
-        return textureTiles
+    static func tiles(forPage page: PDFPage, tileRects:[CGRect], scale: CGFloat) -> [FTTextureTile] {
+        let FTTextureTiles = createTextures(for: page, tileRects: tileRects, scale:scale)
+        return FTTextureTiles
     }
 
 }
 
 extension FTTextureCreation {
 
-    private static func createTextures(for page: PDFPage, tileRects:[CGRect], scale: CGFloat) -> [TextureTile] {
+    private static func createTextures(for page: PDFPage, tileRects:[CGRect], scale: CGFloat) -> [FTTextureTile] {
 
         let pdfBox = PDFDisplayBox.cropBox;
         var pageRect = page.bounds(for: pdfBox)
@@ -49,18 +36,17 @@ extension FTTextureCreation {
         pageRect = pageRect.applying(trasnform)
         pageRect.origin = CGPoint.zero;
 
-        var tiles = [TextureTile]()
+        var tiles = [FTTextureTile]()
 
-        for (index, rect) in tileRects.enumerated() {
+        for rect in tileRects {
 
             let totalScaleFactor = scale*UIScreen.main.scale
 
-            let tileRect = CGRectScale(rect:rect, scale: totalScaleFactor)
+            let scaledTileRect = CGRectScale(rect:rect, scale: totalScaleFactor)
             let scaledPageRect = CGRectScale(rect:pageRect, scale: totalScaleFactor)
-            print("Scaled Tile Rect",tileRect, "scaledPageRect", scaledPageRect)
 
-            let width = Int(tileRect.width);
-            let height = Int(tileRect.height);
+            let width = Int(scaledTileRect.width);
+            let height = Int(scaledTileRect.height);
             guard let rawData = calloc(height * width * 4, MemoryLayout<UInt8>.stride) else {
                 continue;
             }
@@ -72,29 +58,28 @@ extension FTTextureCreation {
             guard let context = context(for: rawData, width: width, height: height, scale: scale) else {
                 continue;
             }
-            let drawTransorm = drawingTransform(pageRef: page, rect: pageRect, pdfBox: pdfBox)
-            context.concatenate(drawTransorm);
 
-            let dx : CGFloat = 0
-            let dy : CGFloat = rect.maxY
+            context.translateBy(x: 0, y: CGFloat(height));
+            context.scaleBy(x: 1, y: -1)
+
+            let dx : CGFloat = -scaledTileRect.origin.x
+            let dy : CGFloat = -(scaledTileRect.origin.y)
             context.translateBy(x: dx, y: dy);
-
-            //Scaling
-            let sx : CGFloat = totalScaleFactor
-            let sy : CGFloat = totalScaleFactor
-            context.scaleBy(x: sx, y: -sy);
-
+            
+            let drawTransorm = drawingTransform(pageRef: page, rect: scaledPageRect, pdfBox: pdfBox)
+            context.concatenate(drawTransorm);
 
             page.displaysAnnotations = true;
             page.draw(with: pdfBox, to: context);
 
             #if DEBUG
-            if let cgImage = context.makeImage() {
-                print("Image", cgImage.width, cgImage.height, totalScaleFactor)
-            }
+//            context.setFillColor(UIColor.green.cgColor)
+//            context.fill([CGRect(origin: .zero, size: CGSize(width: 10, height: 10))])
+//            if let cgImage = context.makeImage() {
+//                print("Image", cgImage.width, cgImage.height, totalScaleFactor)
+//            }
             context.setStrokeColor(UIColor.yellow.cgColor)
-            context.stroke(CGRect(origin: .zero, size: CGSize(width: width, height: height)), width: 5.0)
-            context.drawPath(using: .stroke)
+            context.stroke(context.boundingBoxOfClipPath, width: 5.0)
             #endif
 
             let textureDescriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .bgra8Unorm, width: width, height: height, mipmapped: false)
@@ -113,7 +98,7 @@ extension FTTextureCreation {
                             mipmapLevel: 0,
                             withBytes: rawData,
                             bytesPerRow: bytesPerRow)
-            let tile = TextureTile(texture: texture, rect: rect);
+            let tile = FTTextureTile(texture: texture, rect: scaledTileRect);
             tiles.append(tile)
         }
 
@@ -143,8 +128,6 @@ extension FTTextureCreation {
         context.interpolationQuality = CGInterpolationQuality.none;
         return context
     }
-
-
 }
 
 

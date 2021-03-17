@@ -13,7 +13,7 @@ private let commandQueue = mtlDevice.makeCommandQueue()!
 
 final class TiledTextureRenderer {
 
-    private let tileEncoder : TileEncoder
+    private let tileEncoder : FTTextureTileEncoder
     private let finalRenderTexture : MTLTexture
     private let layer: CAMetalLayer
     private var mvpBuffer : MTLBuffer
@@ -21,7 +21,7 @@ final class TiledTextureRenderer {
     init(metalLayer:CAMetalLayer) {
         self.layer = metalLayer
         if let _pipeline = try? PipelineHelper.createTileTexturePipeline(pixelFormat: metalLayer.pixelFormat) {
-            tileEncoder = TileEncoder(pipeline: _pipeline)
+            tileEncoder = FTTextureTileEncoder(pipeline: _pipeline)
             finalRenderTexture = TextureHelper.createTexture(with: metalLayer.bounds.size, device:mtlDevice)
             let vpSize = layer.bounds.size
             var projection = simd_float4x4.ortho2d(width: Float(vpSize.width), height: Float(vpSize.height))
@@ -34,7 +34,7 @@ final class TiledTextureRenderer {
         }
     }
 
-    func renderTiles(textures:[TextureTile]) {
+    func renderTiles(textures:[FTTextureTile]) {
         guard let drawble = layer.nextDrawable() else {
             preconditionFailure("Unable to get drawble")
         }

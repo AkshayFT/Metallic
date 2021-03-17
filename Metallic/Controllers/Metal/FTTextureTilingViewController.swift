@@ -73,7 +73,7 @@ class FTTextureTilingViewController: UIViewController {
     @IBAction func zoomSelected(_ stepper: UIStepper) {
 
         zoomItem?.title = "Zoom \(stepper.value)"
-       // scrollView.setZoomScale(CGFloat(stepper.value), animated: true)
+       scrollView.setZoomScale(CGFloat(stepper.value), animated: true)
         print("Zoom scale",Int(stepper.value))
         let scale = CGFloat(stepper.value)
 //        let scaledRect = CGRectScale(rect: pageRect, scale: scale)
@@ -102,21 +102,21 @@ class FTTextureTilingViewController: UIViewController {
             }
         }
         pageRect.origin = CGPoint.zero;
-        prepareTiles()
+//        prepareTiles()
     }
 
-    func prepareTiles() {
-        let rows = 3
-        let columns = 3
-        let eachWidth = pageRect.width/CGFloat(rows);
-        let eachHeight = pageRect.height/CGFloat(columns);
+    func prepareTiles(_pageRect: CGRect) {
+        let rows = 4
+        let columns = 4
+        let eachWidth = _pageRect.width/CGFloat(rows);
+        let eachHeight = _pageRect.height/CGFloat(columns);
 
         tileRects.removeAll()
-
+        //Fixed tile sizing
         for row in 0..<rows {
             for col in 0..<columns {
-                let xOrigin = pageRect.width - CGFloat(col)*eachWidth;
-                let yOrigin = pageRect.height - CGFloat(row)*eachHeight;
+                let xOrigin = CGFloat(col)*eachWidth;
+                let yOrigin = CGFloat(row)*eachHeight;
                 let rect = CGRect(x: xOrigin, y: yOrigin, width: eachWidth, height: eachHeight);
                 tileRects.append(rect)
             }

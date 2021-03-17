@@ -1,5 +1,5 @@
 //
-//  TileEncoder.swift
+//  FTTextureTileEncoder.swift
 //  Metallic
 //
 //  Created by Akshay on 04/12/20.
@@ -10,10 +10,10 @@ import Metal
 
 
 //TODO: Long term - Evaluate multiple View port rendering process
-struct TileEncoder {
+struct FTTextureTileEncoder {
     let pipeline: MTLRenderPipelineState
 
-    func encode(tile: TextureTile,
+    func encode(tile: FTTextureTile,
                 targetTexture: MTLTexture,
                 commandbuffer: MTLCommandBuffer,
                 mvpBuffer: MTLBuffer,
@@ -23,7 +23,7 @@ struct TileEncoder {
         renderPassDescriptor.colorAttachments[0].storeAction = .store
         renderPassDescriptor.colorAttachments[0].texture = targetTexture
         renderPassDescriptor.colorAttachments[0].loadAction = .load
-        renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColor(red: 0, green: 0, blue: 1, alpha: 1)
+        renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColor(red: 0, green: 0, blue: 0, alpha: 1)
 
         guard let encoder = commandbuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor) else {
             return

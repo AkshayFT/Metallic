@@ -19,8 +19,8 @@
 		BA54DFE4244D6861000BC1C7 /* ShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DFE3244D6861000BC1C7 /* ShapesViewController.swift */; };
 		BA54DFE6244D68B2000BC1C7 /* ShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54DFE5244D68B2000BC1C7 /* ShapeRenderer.swift */; };
 		BA5BA65A2507B653005FB0C5 /* FTTextureCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BA6592507B653005FB0C5 /* FTTextureCreation.swift */; };
-		BA5F464C257A5A0C0035B533 /* TextureTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F464B257A5A0C0035B533 /* TextureTile.swift */; };
-		BA5F4665257A7A4C0035B533 /* TileEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F4664257A7A4C0035B533 /* TileEncoder.swift */; };
+		BA5F464C257A5A0C0035B533 /* FTTextureTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F464B257A5A0C0035B533 /* FTTextureTile.swift */; };
+		BA5F4665257A7A4C0035B533 /* FTTextureTileEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F4664257A7A4C0035B533 /* FTTextureTileEncoder.swift */; };
 		BA62D2D22474101300A86F24 /* ImageWithAngle.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA62D2D12474101300A86F24 /* ImageWithAngle.metal */; };
 		BA62D2D42474149000A86F24 /* FTImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA62D2D32474149000A86F24 /* FTImageRenderer.swift */; };
 		BA6358DF244DB94C00C92B5C /* shape.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA6358DE244DB94C00C92B5C /* shape.metal */; };
@@ -44,11 +44,12 @@
 		BA9FD0EC2334A58500F488B5 /* Drawing.metal in Sources */ = {isa = PBXBuildFile; fileRef = BA9FD0EB2334A58500F488B5 /* Drawing.metal */; };
 		BAA0039024617F76005E0073 /* Shapes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA0038F24617F76005E0073 /* Shapes.storyboard */; };
 		BAA003A824617FAE005E0073 /* ShapeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA003A624617FAE005E0073 /* ShapeSelectionViewController.swift */; };
-		BAA4D734257E49B3006CA3B2 /* ImageTile.metal in Sources */ = {isa = PBXBuildFile; fileRef = BAA4D733257E49B3006CA3B2 /* ImageTile.metal */; };
+		BAA4D734257E49B3006CA3B2 /* FTImageTile.metal in Sources */ = {isa = PBXBuildFile; fileRef = BAA4D733257E49B3006CA3B2 /* FTImageTile.metal */; };
 		BAA6FF9A246A4BE300F9ED14 /* FTTextureQuadEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA6FF99246A4BE200F9ED14 /* FTTextureQuadEncoder.swift */; };
 		BAA6FF9C246A4C2100F9ED14 /* FTQuadEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA6FF9B246A4C2100F9ED14 /* FTQuadEncoder.swift */; };
 		BAA6FF9E246A4C5C00F9ED14 /* textureQuad.metal in Sources */ = {isa = PBXBuildFile; fileRef = BAA6FF9D246A4C5C00F9ED14 /* textureQuad.metal */; };
 		BAA6FFA0246A4E4900F9ED14 /* FTLockableBufferPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA6FF9F246A4E4900F9ED14 /* FTLockableBufferPool.swift */; };
+		BAAA5FBF2590CBC3005291F9 /* FTTiledTextureCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA5FBE2590CBC3005291F9 /* FTTiledTextureCreation.swift */; };
 		BAB5929D24457CC6001FFC3D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5929C24457CC6001FFC3D /* Utilities.swift */; };
 		BAB592A124459A1C001FFC3D /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB592A024459A1C001FFC3D /* Plane.swift */; };
 		BAB592A324459A47001FFC3D /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB592A224459A47001FFC3D /* Vector.swift */; };
@@ -89,8 +90,8 @@
 		BA54DFE5244D68B2000BC1C7 /* ShapeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeRenderer.swift; sourceTree = "<group>"; };
 		BA57F827250B663400ED4812 /* Metallic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Metallic.entitlements; sourceTree = "<group>"; };
 		BA5BA6592507B653005FB0C5 /* FTTextureCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTextureCreation.swift; sourceTree = "<group>"; };
-		BA5F464B257A5A0C0035B533 /* TextureTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureTile.swift; sourceTree = "<group>"; };
-		BA5F4664257A7A4C0035B533 /* TileEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileEncoder.swift; sourceTree = "<group>"; };
+		BA5F464B257A5A0C0035B533 /* FTTextureTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTextureTile.swift; sourceTree = "<group>"; };
+		BA5F4664257A7A4C0035B533 /* FTTextureTileEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTextureTileEncoder.swift; sourceTree = "<group>"; };
 		BA62D2D12474101300A86F24 /* ImageWithAngle.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ImageWithAngle.metal; sourceTree = "<group>"; };
 		BA62D2D32474149000A86F24 /* FTImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTImageRenderer.swift; sourceTree = "<group>"; };
 		BA6358DE244DB94C00C92B5C /* shape.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shape.metal; sourceTree = "<group>"; };
@@ -117,11 +118,12 @@
 		BAA0038F24617F76005E0073 /* Shapes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shapes.storyboard; sourceTree = "<group>"; };
 		BAA003A524617FAE005E0073 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAA003A624617FAE005E0073 /* ShapeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeSelectionViewController.swift; sourceTree = "<group>"; };
-		BAA4D733257E49B3006CA3B2 /* ImageTile.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ImageTile.metal; sourceTree = "<group>"; };
+		BAA4D733257E49B3006CA3B2 /* FTImageTile.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = FTImageTile.metal; sourceTree = "<group>"; };
 		BAA6FF99246A4BE200F9ED14 /* FTTextureQuadEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTextureQuadEncoder.swift; sourceTree = "<group>"; };
 		BAA6FF9B246A4C2100F9ED14 /* FTQuadEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTQuadEncoder.swift; sourceTree = "<group>"; };
 		BAA6FF9D246A4C5C00F9ED14 /* textureQuad.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = textureQuad.metal; sourceTree = "<group>"; };
 		BAA6FF9F246A4E4900F9ED14 /* FTLockableBufferPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTLockableBufferPool.swift; sourceTree = "<group>"; };
+		BAAA5FBE2590CBC3005291F9 /* FTTiledTextureCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTiledTextureCreation.swift; sourceTree = "<group>"; };
 		BAB5929C24457CC6001FFC3D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BAB592A024459A1C001FFC3D /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		BAB592A224459A47001FFC3D /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
@@ -210,10 +212,11 @@
 				BA8084B7256D3B3900DD2733 /* Digits.pdf */,
 				BABD70EB25088D4200764478 /* Bill.pdf */,
 				BABFD1E12501053F0029361A /* TiledTextureRenderer.swift */,
-				BA5F4664257A7A4C0035B533 /* TileEncoder.swift */,
+				BA5F4664257A7A4C0035B533 /* FTTextureTileEncoder.swift */,
 				BA5BA6592507B653005FB0C5 /* FTTextureCreation.swift */,
-				BA5F464B257A5A0C0035B533 /* TextureTile.swift */,
-				BAA4D733257E49B3006CA3B2 /* ImageTile.metal */,
+				BAAA5FBE2590CBC3005291F9 /* FTTiledTextureCreation.swift */,
+				BA5F464B257A5A0C0035B533 /* FTTextureTile.swift */,
+				BAA4D733257E49B3006CA3B2 /* FTImageTile.metal */,
 			);
 			path = TiledTexture;
 			sourceTree = "<group>";
@@ -440,7 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9FD0CC23320C7D00F488B5 /* SIMDUtils.swift in Sources */,
-				BAA4D734257E49B3006CA3B2 /* ImageTile.metal in Sources */,
+				BAA4D734257E49B3006CA3B2 /* FTImageTile.metal in Sources */,
 				BA758E58232913950080D9DB /* ImageRenderShaders.metal in Sources */,
 				BAA6FF9A246A4BE300F9ED14 /* FTTextureQuadEncoder.swift in Sources */,
 				BAB592A324459A47001FFC3D /* Vector.swift in Sources */,
@@ -458,13 +461,14 @@
 				BAB9930925627E4A00A32CC5 /* BaseShapeView.swift in Sources */,
 				BAB9930C25627E4A00A32CC5 /* Rectangle.swift in Sources */,
 				BAB592AC24459B77001FFC3D /* LineSegment.swift in Sources */,
+				BAAA5FBF2590CBC3005291F9 /* FTTiledTextureCreation.swift in Sources */,
 				BAA6FFA0246A4E4900F9ED14 /* FTLockableBufferPool.swift in Sources */,
 				BA5BA65A2507B653005FB0C5 /* FTTextureCreation.swift in Sources */,
 				BAB9930E25627E4A00A32CC5 /* ShapeGenerator.swift in Sources */,
 				BA758E522328EC3A0080D9DB /* ImageRenderViewController.swift in Sources */,
 				BA9E86F12473F125009F74A9 /* FTImageWithAngleEncoder.swift in Sources */,
 				BA54DFE4244D6861000BC1C7 /* ShapesViewController.swift in Sources */,
-				BA5F4665257A7A4C0035B533 /* TileEncoder.swift in Sources */,
+				BA5F4665257A7A4C0035B533 /* FTTextureTileEncoder.swift in Sources */,
 				BA9D9FC02338D56E00284F0A /* PipelineHelper.swift in Sources */,
 				BAB592A424459A4E001FFC3D /* Polygon.swift in Sources */,
 				BA1150DD233B4CAF0052C753 /* MetalBuffer.swift in Sources */,
@@ -485,7 +489,7 @@
 				BAB9930D25627E4A00A32CC5 /* Star.swift in Sources */,
 				BA1805982469BF01003FC86A /* ViewController_Metal.swift in Sources */,
 				BAB592AA24459B62001FFC3D /* Vertex.swift in Sources */,
-				BA5F464C257A5A0C0035B533 /* TextureTile.swift in Sources */,
+				BA5F464C257A5A0C0035B533 /* FTTextureTile.swift in Sources */,
 				BA9FD0E92334A1D800F488B5 /* DrawRenderer.swift in Sources */,
 				BABFD1E02500F12C0029361A /* FTTextureTilingViewController.swift in Sources */,
 				BA25EE982335060600EAEEEF /* FTBlitEncoder.swift in Sources */,
