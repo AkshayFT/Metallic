@@ -45,6 +45,7 @@ final class FTTiledTextureCreation {
                 continue;
             }
 
+            
             context.translateBy(x: 0, y: CGFloat(height));
             context.scaleBy(x: 1, y: -1)
 
