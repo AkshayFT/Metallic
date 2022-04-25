@@ -50,7 +50,7 @@ class PipelineHelper {
         descriptor.vertexFunction = library.makeFunction(name: "fillVertexShader")
         descriptor.fragmentFunction = library.makeFunction(name: "fillFragmentShader")
         descriptor.colorAttachments[0].pixelFormat = pixelFormat
-        descriptor.sampleCount = 4
+        descriptor.sampleCount = 1
         return try device.makeRenderPipelineState(descriptor: descriptor)
     }
 

@@ -314,16 +314,16 @@ extension DrawRenderer {
 
         let renderPassDescriptor = MTLRenderPassDescriptor()
         renderPassDescriptor.colorAttachments[0].loadAction = .load
-        renderPassDescriptor.colorAttachments[0].texture = self.multiSampleTexture
-        renderPassDescriptor.colorAttachments[0].resolveTexture = finalRenderTexture
-        renderPassDescriptor.colorAttachments[0].storeAction = .storeAndMultisampleResolve
+        renderPassDescriptor.colorAttachments[0].texture = finalRenderTexture
+//        renderPassDescriptor.colorAttachments[0].resolveTexture = finalRenderTexture
+        renderPassDescriptor.colorAttachments[0].storeAction = .store
         let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
         renderEncoder?.setRenderPipelineState(pipeline_fill)
 
         renderEncoder?.setVertexBuffer(vertexBuffer?.buffer, offset: 0, index: 0)
         renderEncoder?.setVertexBuffer(mvpBuffer, offset: 0, index: 1)
 
-        renderEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: vertices.count)
+        renderEncoder?.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: vertices.count)
         renderEncoder?.endEncoding()
 
         FTBlitEncoder.copy(sourceTexture: self.finalRenderTexture,

@@ -79,9 +79,9 @@ final class TextureHelper {
         textureDesc.width = size.width.toInt
         textureDesc.height = size.height.toInt
         textureDesc.pixelFormat = .bgra8Unorm
-        textureDesc.textureType = .type2DMultisample
+        textureDesc.textureType = .type2D
         textureDesc.usage = .renderTarget
-        textureDesc.sampleCount = 4
+        textureDesc.sampleCount = 1
         guard let texture = device.makeTexture(descriptor: textureDesc) else {
             fatalError("Unable to create Multi Sample texture")
         }

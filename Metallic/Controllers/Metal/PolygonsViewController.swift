@@ -43,33 +43,52 @@ class PolygonsViewController: UIViewController {
         let randomArray = pointsArray.randomElement()!
 
         let vertices = randomArray.map { vector -> Vertex in
-            borderPoints.append(vector.cgPoint)
             return Vertex(vector, vector.normal)
         }
 
         if let polygon = Polygon(vertices)?.tessellate() {
-                   let triangles = polygon.triangulate()
-                   for triangle in triangles {
-                       let points = triangle.vertices.map { vertex -> CGPoint in
-                           return CGPoint(x: vertex.position.x, y: vertex.position.y)
-                       }
-                       renderer.fillShape(points: points)
-                   }
-               }
+            let triangles = polygon.triangulate()
+            for triangle in triangles {
+                let points = triangle.vertices.map { vertex -> CGPoint in
+                    return CGPoint(x: vertex.position.x, y: vertex.position.y)
+                }
+                renderer.fillShape(points: points)
+            }
+        }
+    }
 
-               //Append First point as the last point to close the path
-               borderPoints.append(borderPoints[0])
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        print(#function,touches.map({$0.location(in: self.view)}))
+    }
 
-               renderer.render(mode: .pen,
-                               points:borderPoints,
-                               color:.red,
-                               thickness: .small,
-                               shouldClear: false,
-                               shouldEnd: false,
-                               isPolygon: true)
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        print(#function,touches.map({$0.location(in: self.view)}))
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+       // print(#function,touches.map({$0.location(in: self.view)}))
     }
 
 }
+
+extension Vector {
+    static var random: Vector {
+        return Vector(Double.random(in: 200...600), Double.random(in: 200...600))
+    }
+
+    static var randomVectors: [Vector] {
+        var vectors = [Vector]()
+        for _ in 5...20 {
+            vectors.append(Vector.random)
+        }
+        vectors.append(vectors[0])
+        return vectors
+    }
+}
+
 
 
 //Clockwise

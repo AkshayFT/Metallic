@@ -24,7 +24,7 @@ class FTMetalBuffer<T> : RoundRobinConfirm,Equatable {
         self.count = vertices.count
         self.expand = (expand ?? defaultIncrement)
 
-        var length = vertices.count;
+        var length = vertices.isEmpty ? 1 : vertices.count;
         if(self.expand > 0) {
             length += 0;
         }
